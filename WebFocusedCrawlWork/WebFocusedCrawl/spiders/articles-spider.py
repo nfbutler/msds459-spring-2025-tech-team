@@ -29,19 +29,28 @@ class ArticlesSpider(scrapy.Spider):
         allowed_domains = ['en.wikipedia.org'] 
         # list of Wikipedia URLs for topic of interest
         # top ten companies in the industry sector (Materials)
+        # urls = [
+        #     "https://en.wikipedia.org/wiki/Linde_plc",
+        #     "https://en.wikipedia.org/wiki/Sherwin-Williams",
+        #     "https://en.wikipedia.org/wiki/Ecolab",
+        #     "https://en.wikipedia.org/wiki/Southern_Copper_Corporation",
+        #     "https://en.wikipedia.org/wiki/Air_Products",
+        #     "https://en.wikipedia.org/wiki/CRH_plc",
+        #     "https://en.wikipedia.org/wiki/Newmont",
+        #     "https://en.wikipedia.org/wiki/Freeport-McMoRan",
+        #     "https://en.wikipedia.org/wiki/Corteva",
+        #     "https://en.wikipedia.org/wiki/Vulcan_Materials_Company"
+        #     ]
         urls = [
-            "https://en.wikipedia.org/wiki/Linde_plc",
-            "https://en.wikipedia.org/wiki/Sherwin-Williams",
-            "https://en.wikipedia.org/wiki/Ecolab",
-            "https://en.wikipedia.org/wiki/Southern_Copper_Corporation",
-            "https://en.wikipedia.org/wiki/Air_Products",
-            "https://en.wikipedia.org/wiki/CRH_plc",
-            "https://en.wikipedia.org/wiki/Newmont",
-            "https://en.wikipedia.org/wiki/Freeport-McMoRan",
-            "https://en.wikipedia.org/wiki/Corteva",
-            "https://en.wikipedia.org/wiki/Vulcan_Materials_Company"
-            ]
-            
+                "https://en.wikipedia.org/wiki/Mistral_AI",
+                "https://en.wikipedia.org/wiki/Cohere",
+                "https://en.wikipedia.org/wiki/Aleph_Alpha",
+                "https://en.wikipedia.org/wiki/LightOn",
+                "https://en.wikipedia.org/wiki/Writer_Inc",
+                "https://en.wikipedia.org/wiki/Runway_(company)",
+                "https://en.wikipedia.org/wiki/Synthesia_(company)",
+                "https://en.wikipedia.org/wiki/LangChain"
+            ]    
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
 
