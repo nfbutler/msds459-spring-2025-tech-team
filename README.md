@@ -1,4 +1,4 @@
-Read me file
+## Desciption of files
 
-
-project
+*   [WebFocusedCrawlerWork](./WebFocusedCrawlerWork) - Folder for on-going python code for focused crawler
+*   [term\_paper](./term_paper) - Folder for term paper sumbissions
